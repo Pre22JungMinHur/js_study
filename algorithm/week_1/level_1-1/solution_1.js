@@ -3,7 +3,7 @@ export const isString = (value) => {
 }
 const shift = (line) => {
   if (isString(line)) {
-    let splittedLine = line.split('')
+    let splittedLine = line.trim().split('')
     let num = ''
     let shiftNum = ''
     for (let i = 0; i < splittedLine.length; i++) {
