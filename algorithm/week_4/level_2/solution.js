@@ -2,7 +2,7 @@ export const armStrongNumber = (line) => {
     let splitedArray = line.trim().split(' ')
     let armstrongNum = 0
     let armstrongNumArray = []
-    for (let i = Number(splitedArray[0]); i < Number(splitedArray[1]); i++) {
+    for (let i = Number(splitedArray[0]); i <= Number(splitedArray[1]); i++) {
         let splitToEach = String(i).split('')
         for (let i = 0; i < splitToEach.length; i++) {
             armstrongNum += Math.pow(Number(splitToEach[i]), 3)
@@ -16,7 +16,7 @@ export const armStrongNumber = (line) => {
     }
     // console.log(armstrongNum)
     // console.log(armstrongNumArray.join(' '))
-    return armstrongNumArray.join(' ')
+    return armstrongNumArray.join(' ') +''
 }
 
 export default armStrongNumber
